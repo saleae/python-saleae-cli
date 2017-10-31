@@ -33,7 +33,7 @@ python saleae_cli.py --capture-count 24 --capture-duration 3600 --export-analyze
 ```
 (Linux or MacOS)
 ```
-python saleae_cli.py --capture-count 24 --capture-duration 3600 --export-analyzers ~\Desktop\export
+python saleae_cli.py --capture-count 24 --capture-duration 3600 --export-analyzers ~/Desktop/export
 ```
 **Take 100 captures, each 10 seconds long, saving all outputs to the same 'export' folder on the desktop**
 
@@ -43,7 +43,7 @@ python saleae_cli.py --capture-count 100 --capture-duration 10 --save-captures \
 ```
 (Linux or MacOS)
 ```
-python saleae_cli.py --capture-count 3 --capture-duration 0.1 --save-captures ~\Desktop\export --export-analyzers ~\Desktop\export --export-data ~\Desktop\export
+python saleae_cli.py --capture-count 3 --capture-duration 0.1 --save-captures ~/Desktop/export --export-analyzers ~/Desktop/export --export-data ~/Desktop/export
 ```
 
 
