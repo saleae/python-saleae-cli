@@ -4,9 +4,8 @@ This is a basic command line utility to automate the Saleae Logic software.
 This tool can be used to automatically take a series of shorter captures over an extended time period. For example, if a 24 hour capture can't be recorded in a single run due to memory limitations, this utility could be used to automatically take 24 captures of one hour each.
 
 ### Prerequisites
-- Saleae Logic software running with the socket API enabled. [instructions](https://support.saleae.com/hc/en-us/articles/208667266-How-to-enable-the-socket-server-for-the-scripting-API)
-- [python 3](https://www.python.org/downloads/) installed.
-- [ppannuto python-saleae](https://github.com/ppannuto/python-saleae) library installed. 
+- Saleae Logic software running with the socket API enabled. [instructions](https://support.saleae.com/saleae-api-and-sdk/socket-api)
+- [ppannuto python-saleae](https://github.com/ppannuto/python-saleae) library installed.
 
 ### Usage
 
@@ -17,15 +16,16 @@ The utility allows the user to set the number of captures and the duration of ea
 
 ### Examples
 
+**Take 1 second long capture without saving anything.**
+```
+python saleae_cli.py
+```
+
 **Just take 5 captures, each 0.1 seconds long, without saving anything.**
 ```
-python saleae_cli.py --capture-count 5 --capture-duration 0.1 
+python saleae_cli.py --capture-count 5 --capture-duration 0.1
 ```
-Note: if python 2 and python 3 are installed, you may need to call python using `python3`
-
 **Take 24 captures, each 1 hour long, exporting the analyzers to an 'export' folder on the desktop.**
-
-Note that the destination folder must already exist before running the utility.
 
 (Windows)
 ```
