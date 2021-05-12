@@ -17,6 +17,7 @@ parser.add_argument('--export-data', metavar='PATH', help='if specified, exports
 parser.add_argument('--export-analyzers', metavar='PATH', help='if specified, exports each analyzer to the specified directory')
 parser.add_argument('--ip', metavar='IP', default='localhost', help='optional, IP address to connect to. Default localhost')
 parser.add_argument('--port', metavar='PORT', default=10429, help='optional, Port to connect to. Default 10429')
+parser.add_argument('--exit', action='store_true', help='optional, use to close the Logic software once complete')
 
 args = parser.parse_args()
 
@@ -58,3 +59,6 @@ for x in range(args.capture_count):
             print('exporting analyzer ' + analyzer[0] + ' to ' + save_path)
             s.export_analyzer(analyzer[1], save_path)
         
+if args.exit is True:
+    print('closing Logic software')
+    s.exit()
