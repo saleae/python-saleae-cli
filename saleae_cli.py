@@ -61,4 +61,8 @@ for x in range(args.capture_count):
         
 if args.exit is True:
     print('closing Logic software')
-    s.exit()
+    try:
+        s.exit()
+    except:
+        # ignore errors from exit command, since it will raise due to socket disconnect.
+        pass
