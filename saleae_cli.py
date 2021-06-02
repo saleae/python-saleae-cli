@@ -53,8 +53,8 @@ for x in range(args.capture_count):
         analyzers = s.get_analyzers()
         if analyzers.count == 0:
             print('Warning: analyzer export path was specified, but no analyzers are present in the capture')
-        for analyzer in analyzers:
-            file_name = '{0}_{1}.csv'.format(x, analyzer[0])
+        for i,analyzer in enumerate(analyzers):
+            file_name = '{0}_{1}_{2}.csv'.format(x,i, analyzer[0])
             save_path = os.path.join(args.export_analyzers, file_name)
             print('exporting analyzer ' + analyzer[0] + ' to ' + save_path)
             s.export_analyzer(analyzer[1], save_path)
